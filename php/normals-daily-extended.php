@@ -1,6 +1,6 @@
 <?php
 // Extended daily normals (percentiles, threshold probabilities).
-// Requires at least the Growth tier -- a Free or Developer key gets a 403.
+// Requires Advanced Access -- a Free or Developer key gets a 403.
 $apiKey = getenv('USCLIMATEDATA_API_KEY');
 if (!$apiKey) {
     fwrite(STDERR, "Set USCLIMATEDATA_API_KEY to your API key\n");
@@ -20,7 +20,7 @@ $status = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 curl_close($ch);
 
 if ($status === 403) {
-    echo "This endpoint requires at least the Growth tier. Upgrade at https://build.usclimatedata.com/pricing\n";
+    echo "This endpoint requires Advanced Access. Request access at https://build.usclimatedata.com/contact\n";
 } elseif ($status !== 200) {
     fwrite(STDERR, "Request failed with status {$status}: {$body}\n");
     exit(1);

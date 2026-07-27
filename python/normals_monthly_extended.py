@@ -1,6 +1,6 @@
 """Extended monthly normals (degree-days, percentiles, threshold days).
 
-Requires at least the Growth tier -- a Free or Developer key gets a 403.
+Requires Advanced Access -- a Free or Developer key gets a 403.
 """
 import os
 
@@ -17,8 +17,8 @@ response = requests.get(
 )
 if response.status_code == 403:
     print(
-        "This endpoint requires at least the Growth tier. "
-        "Upgrade at https://build.usclimatedata.com/pricing"
+        "This endpoint requires Advanced Access. "
+        "Request access at https://build.usclimatedata.com/contact"
     )
 else:
     response.raise_for_status()

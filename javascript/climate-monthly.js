@@ -1,6 +1,9 @@
 // Monthly climate averages for a station.
 const BASE_URL = "https://api.usclimatedata.com/v1";
 const API_KEY = process.env.USCLIMATEDATA_API_KEY;
+if (!API_KEY) {
+  throw new Error("Set USCLIMATEDATA_API_KEY to your API key");
+}
 
 const url = new URL(`${BASE_URL}/climate`);
 url.searchParams.set("station_id", "USFL0316");

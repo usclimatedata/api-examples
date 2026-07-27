@@ -1,6 +1,9 @@
 // Find US weather stations near a city.
 const BASE_URL = "https://api.usclimatedata.com/v1";
 const API_KEY = process.env.USCLIMATEDATA_API_KEY;
+if (!API_KEY) {
+  throw new Error("Set USCLIMATEDATA_API_KEY to your API key");
+}
 
 const url = new URL(`${BASE_URL}/stations`);
 url.searchParams.set("city", "New York");

@@ -1,0 +1,16 @@
+// 1991-2020 monthly climate normals. Available on the Free tier with a
+// restricted set of columns (extra fields like `description` require
+// Developer+ -- see https://build.usclimatedata.com/docs for the full
+// column list).
+const BASE_URL = "https://api.usclimatedata.com/v1";
+const API_KEY = process.env.USCLIMATEDATA_API_KEY;
+
+const url = new URL(`${BASE_URL}/normals/monthly`);
+url.searchParams.set("station_id", "USFL0316");
+url.searchParams.set("month", "7");
+
+const response = await fetch(url, { headers: { "X-API-Key": API_KEY } });
+if (!response.ok) {
+  throw new Error(`Request failed: ${response.status}`);
+}
+console.log(await response.json());

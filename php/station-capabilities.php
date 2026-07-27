@@ -7,7 +7,7 @@ if (!$apiKey) {
 }
 
 $stationId = 'USFL0316';
-$url = "https://api.usclimatedata.com/v1/stations/{$stationId}/capabilities";
+$url = "https://api.usclimatedata.com/api/v1/stations/{$stationId}/capabilities";
 
 $ch = curl_init($url);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);

@@ -5,7 +5,7 @@ interface CapabilitiesResponse {
   has_daily_normals: boolean;
 }
 
-const BASE_URL = "https://api.usclimatedata.com/v1";
+const BASE_URL = "https://api.usclimatedata.com/api/v1";
 const API_KEY = process.env.USCLIMATEDATA_API_KEY;
 if (!API_KEY) {
   throw new Error("Set USCLIMATEDATA_API_KEY to your API key");

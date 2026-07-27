@@ -6,7 +6,7 @@ if (!$apiKey) {
     exit(1);
 }
 
-$url = 'https://api.usclimatedata.com/v1/stations?' . http_build_query([
+$url = 'https://api.usclimatedata.com/api/v1/stations?' . http_build_query([
     'city' => 'New York',
     'limit' => 5,
 ]);

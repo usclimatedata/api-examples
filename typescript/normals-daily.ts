@@ -1,6 +1,6 @@
 // Daily climate normals for a specific month.
 // Requires at least the Developer tier -- a Free key gets a 403.
-const BASE_URL = "https://api.usclimatedata.com/v1";
+const BASE_URL = "https://api.usclimatedata.com/api/v1";
 const API_KEY = process.env.USCLIMATEDATA_API_KEY;
 if (!API_KEY) {
   throw new Error("Set USCLIMATEDATA_API_KEY to your API key");

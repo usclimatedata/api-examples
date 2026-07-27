@@ -7,7 +7,7 @@ if (!$apiKey) {
     exit(1);
 }
 
-$url = 'https://api.usclimatedata.com/v1/normals/daily?' . http_build_query([
+$url = 'https://api.usclimatedata.com/api/v1/normals/daily?' . http_build_query([
     'station_id' => 'USFL0316',
     'month' => 7,
 ]);

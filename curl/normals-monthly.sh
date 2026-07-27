@@ -6,5 +6,5 @@
 set -euo pipefail
 : "${USCLIMATEDATA_API_KEY:?Set USCLIMATEDATA_API_KEY to your API key}"
 
-curl -sS "https://api.usclimatedata.com/v1/normals/monthly?station_id=USFL0316&month=7" \
+curl -sS "https://api.usclimatedata.com/api/v1/normals/monthly?station_id=USFL0316&month=7" \
   -H "X-API-Key: ${USCLIMATEDATA_API_KEY}"

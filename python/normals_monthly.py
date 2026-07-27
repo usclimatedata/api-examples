@@ -8,7 +8,7 @@ import os
 
 import requests
 
-BASE_URL = "https://api.usclimatedata.com/v1"
+BASE_URL = "https://api.usclimatedata.com/api/v1"
 API_KEY = os.environ["USCLIMATEDATA_API_KEY"]
 
 response = requests.get(

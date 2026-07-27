@@ -1,8 +1,11 @@
 <?php
-// 1991-2020 monthly climate normals. Available on the Free tier with a
-// restricted set of columns (extra fields like `description` require
-// Developer+ -- see https://build.usclimatedata.com/docs for the full
-// column list).
+
+/* 
+1991-2020 monthly climate normals. 
+Available on the Free tier with a restricted set of columns
+(extra fields like `description` require Developer+  See https://build.usclimatedata.com/docs for the full column list). 
+*/
+
 $apiKey = getenv('USCLIMATEDATA_API_KEY');
 if (!$apiKey) {
     fwrite(STDERR, "Set USCLIMATEDATA_API_KEY to your API key\n");
@@ -11,7 +14,7 @@ if (!$apiKey) {
 
 $url = 'https://api.usclimatedata.com/api/v1/normals/monthly?' . http_build_query([
     'station_id' => 'USFL0316',
-    'month' => 7,
+    'month' => 7, // July
 ]);
 
 $ch = curl_init($url);

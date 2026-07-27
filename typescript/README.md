@@ -11,6 +11,11 @@ npx tsc && node dist/stations.js
 export USCLIMATEDATA_API_KEY=your-key-here
 ```
 
-Files: `stations.ts`, `climate-monthly.ts`, `station-capabilities.ts`,
-`normals-monthly.ts`, `normals-monthly-extended.ts` (Advanced Access),
-`normals-daily.ts` (Developer tier), `normals-daily-extended.ts` (Advanced Access).
+Files: 
+`stations.ts`, 
+`climate-monthly.ts`, 
+`station-capabilities.ts`,
+`normals-monthly.ts`, 
+`normals-monthly-extended.ts` (Advanced Access),
+`normals-daily.ts` (Developer tier), 
+`normals-daily-extended.ts` (Advanced Access)

@@ -1,0 +1,117 @@
+{
+  "info": {
+    "name": "US Climate Data API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      { "key": "key", "value": "X-API-Key" },
+      { "key": "value", "value": "{{api_key}}" },
+      { "key": "in", "value": "header" }
+    ]
+  },
+  "item": [
+    {
+      "name": "Stations",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/stations?city=New York&limit=5",
+          "host": ["{{base_url}}"],
+          "path": ["stations"],
+          "query": [
+            { "key": "city", "value": "New York" },
+            { "key": "limit", "value": "5" }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Climate (monthly)",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/climate?station_id={{station_id}}&temp_unit=f",
+          "host": ["{{base_url}}"],
+          "path": ["climate"],
+          "query": [
+            { "key": "station_id", "value": "{{station_id}}" },
+            { "key": "temp_unit", "value": "f" }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Station capabilities",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/stations/{{station_id}}/capabilities",
+          "host": ["{{base_url}}"],
+          "path": ["stations", "{{station_id}}", "capabilities"]
+        }
+      }
+    },
+    {
+      "name": "Normals monthly",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/normals/monthly?station_id={{station_id}}&month=7",
+          "host": ["{{base_url}}"],
+          "path": ["normals", "monthly"],
+          "query": [
+            { "key": "station_id", "value": "{{station_id}}" },
+            { "key": "month", "value": "7" }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Normals monthly extended (Growth tier)",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/normals/monthly/extended?station_id={{station_id}}&month=7",
+          "host": ["{{base_url}}"],
+          "path": ["normals", "monthly", "extended"],
+          "query": [
+            { "key": "station_id", "value": "{{station_id}}" },
+            { "key": "month", "value": "7" }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Normals daily (Developer tier)",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/normals/daily?station_id={{station_id}}&month=7",
+          "host": ["{{base_url}}"],
+          "path": ["normals", "daily"],
+          "query": [
+            { "key": "station_id", "value": "{{station_id}}" },
+            { "key": "month", "value": "7" }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Normals daily extended (Growth tier)",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{base_url}}/normals/daily/extended?station_id={{station_id}}&month=7",
+          "host": ["{{base_url}}"],
+          "path": ["normals", "daily", "extended"],
+          "query": [
+            { "key": "station_id", "value": "{{station_id}}" },
+            { "key": "month", "value": "7" }
+          ]
+        }
+      }
+    }
+  ]
+}

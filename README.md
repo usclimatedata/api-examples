@@ -11,8 +11,8 @@ The examples demonstrate common use cases, including searching for locations and
 
 ## Get an API key
 
-Sign up for a free API key at https://account.usclimatedata.com. Every example
-in this repository reads the key from the `USCLIMATEDATA_API_KEY` environment
+Sign up for a free API key at https://account.usclimatedata.com. 
+Every example in this repository reads the key from the `USCLIMATEDATA_API_KEY` environment
 variable:
 
 ```bash
@@ -37,19 +37,18 @@ All 7 live `/v1` endpoints are covered by every example set. Some endpoints requ
 | Endpoint | Minimum tier | Notes |
 |---|---|---|
 | `GET /stations` | Free | Search stations by city, state, zip, or coordinates |
-| `GET /climate` | Free | Monthly climate averages for a station |
 | `GET /stations/{station_id}/capabilities` | Free | Which normals datasets exist for a station |
+| `GET /climate` | Free | Monthly climate averages for a station |
 | `GET /normals/monthly` | Free | 1991-2020 monthly normals, restricted columns on Free |
 | `GET /normals/daily` | Developer | Daily normals for a specific month |
 | `GET /normals/monthly/extended` | Advanced Access | Degree-days, percentiles, threshold days |
 | `GET /normals/daily/extended` | Advanced Access | Daily percentiles and threshold probabilities |
 
 Free and Developer are the only self-serve plans today. The extended normals
-endpoints require Advanced Access, a custom plan available on request via
-'https://build.usclimatedata.com/contact'.
+endpoints require Advanced Access, a custom plan available on request via 'https://build.usclimatedata.com/contact'.
+
 There is no self-serve signup for it yet. A key without sufficient tier gets a `403` on any gated endpoint.
-Every example that touches a gated endpoint shows how to detect and handle
-that response.
+Every example that touches a gated endpoint shows how to detect and handle that response.
 
 ## About the API
 

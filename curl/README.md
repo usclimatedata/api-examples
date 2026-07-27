@@ -8,7 +8,7 @@ export USCLIMATEDATA_API_KEY=your-key-here
 ./climate-monthly.sh
 ./station-capabilities.sh
 ./normals-monthly.sh
-./normals-monthly-extended.sh   # requires Growth tier
+./normals-monthly-extended.sh   # requires Advanced Access
 ./normals-daily.sh              # requires Developer tier
-./normals-daily-extended.sh     # requires Growth tier
+./normals-daily-extended.sh     # requires Advanced Access
 ```

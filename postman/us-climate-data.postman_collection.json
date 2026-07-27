@@ -69,7 +69,7 @@
       }
     },
     {
-      "name": "Normals monthly extended (Growth tier)",
+      "name": "Normals monthly extended (Advanced Access)",
       "request": {
         "method": "GET",
         "url": {
@@ -99,7 +99,7 @@
       }
     },
     {
-      "name": "Normals daily extended (Growth tier)",
+      "name": "Normals daily extended (Advanced Access)",
       "request": {
         "method": "GET",
         "url": {

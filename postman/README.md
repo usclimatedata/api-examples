@@ -7,5 +7,6 @@
    station returned by the "Stations" request.
 
 Two requests ("Normals monthly extended" and "Normals daily extended") require
-at least the Growth tier; "Normals daily" requires at least the Developer
-tier. A Free-tier key gets a 403 on those three.
+Advanced Access, a custom plan available on request via
+https://build.usclimatedata.com/contact; "Normals daily" requires at least
+the Developer tier. A Free-tier key gets a 403 on those three.

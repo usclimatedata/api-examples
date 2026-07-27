@@ -9,7 +9,7 @@ php php/stations.php
 php php/climate-monthly.php
 php php/station-capabilities.php
 php php/normals-monthly.php
-php php/normals-monthly-extended.php   # requires Growth tier
+php php/normals-monthly-extended.php   # requires Advanced Access
 php php/normals-daily.php              # requires Developer tier
-php php/normals-daily-extended.php     # requires Growth tier
+php php/normals-daily-extended.php     # requires Advanced Access
 ```

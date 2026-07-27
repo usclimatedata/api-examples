@@ -41,11 +41,15 @@ All 7 live `/v1` endpoints are covered by every example set. Some endpoints requ
 | `GET /stations/{station_id}/capabilities` | Free | Which normals datasets exist for a station |
 | `GET /normals/monthly` | Free | 1991-2020 monthly normals, restricted columns on Free |
 | `GET /normals/daily` | Developer | Daily normals for a specific month |
-| `GET /normals/monthly/extended` | Growth | Degree-days, percentiles, threshold days |
-| `GET /normals/daily/extended` | Growth | Daily percentiles and threshold probabilities |
+| `GET /normals/monthly/extended` | Advanced Access | Degree-days, percentiles, threshold days |
+| `GET /normals/daily/extended` | Advanced Access | Daily percentiles and threshold probabilities |
 
-A Free-tier key gets a `403` on any endpoint above its tier. Every example that
-touches a gated endpoint shows how to detect and handle that response.
+Free and Developer are the only self-serve plans today. The extended normals
+endpoints require Advanced Access, a custom plan available on request via
+https://build.usclimatedata.com/contact -- there is no self-serve signup for
+it yet. A key without sufficient tier gets a `403` on any gated endpoint.
+Every example that touches a gated endpoint shows how to detect and handle
+that response.
 
 ## About the API
 

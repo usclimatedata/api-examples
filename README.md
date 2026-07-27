@@ -11,7 +11,7 @@ The examples demonstrate common use cases, including searching for locations and
 
 ## Get an API key
 
-Sign up for a free API key at https://account.usclimatedata.com. 
+Sign up for a free API key at https://account.usclimatedata.com.
 Every example in this repository reads the key from the `USCLIMATEDATA_API_KEY` environment
 variable:
 
@@ -45,10 +45,13 @@ All 7 live `/v1` endpoints are covered by every example set. Some endpoints requ
 | `GET /normals/daily/extended` | Advanced Access | Daily percentiles and threshold probabilities |
 
 Free and Developer are the only self-serve plans today. The extended normals
-endpoints require Advanced Access, a custom plan available on request via 'https://build.usclimatedata.com/contact'.
+endpoints require Advanced Access, a custom plan available on request via
+https://build.usclimatedata.com/contact.
 
-There is no self-serve signup for it yet. A key without sufficient tier gets a `403` on any gated endpoint.
-Every example that touches a gated endpoint shows how to detect and handle that response.
+There is no self-serve signup for it yet. A key without sufficient tier gets
+a `403` on any gated endpoint. The language examples handle that response
+explicitly, and the Postman collection includes response tests for gated
+requests.
 
 ## About the API
 

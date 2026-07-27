@@ -1,11 +1,26 @@
 // Find US weather stations near a city.
 interface StationsResponse {
+  request: {
+    endpoint: string;
+    city?: string | null;
+    state?: string | null;
+  };
+  meta: {
+    count: number;
+    limit: number;
+  };
   stations: Array<{
     station_id: string;
-    name: string;
-    state: string;
-    latitude: number;
-    longitude: number;
+    name: string | null;
+    state: string | null;
+    state_name: string | null;
+    country: string | null;
+    latitude: number | null;
+    longitude: number | null;
+    elevation_m: number | null;
+    timezone: string | null;
+    zip: string | null;
+    distance_km?: number | null;
   }>;
 }
 

@@ -81,7 +81,26 @@
             { "key": "month", "value": "7" }
           ]
         }
-      }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Returns data or the documented plan-access response\", function () {",
+              "  pm.expect([200, 403]).to.include(pm.response.code);",
+              "});",
+              "if (pm.response.code === 403) {",
+              "  pm.test(\"403 uses the standard forbidden error code\", function () {",
+              "    pm.expect(pm.response.json()).to.have.nested.property(\"error.code\", \"forbidden\");",
+              "  });",
+              "  console.warn(\"This endpoint requires Advanced Access: https://build.usclimatedata.com/contact\");",
+              "}"
+            ]
+          }
+        }
+      ]
     },
     {
       "name": "Normals daily (Developer tier)",
@@ -96,7 +115,26 @@
             { "key": "month", "value": "7" }
           ]
         }
-      }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Returns data or the documented plan-access response\", function () {",
+              "  pm.expect([200, 403]).to.include(pm.response.code);",
+              "});",
+              "if (pm.response.code === 403) {",
+              "  pm.test(\"403 uses the standard forbidden error code\", function () {",
+              "    pm.expect(pm.response.json()).to.have.nested.property(\"error.code\", \"forbidden\");",
+              "  });",
+              "  console.warn(\"This endpoint requires the Developer tier: https://build.usclimatedata.com/pricing\");",
+              "}"
+            ]
+          }
+        }
+      ]
     },
     {
       "name": "Normals daily extended (Advanced Access)",
@@ -111,7 +149,26 @@
             { "key": "month", "value": "7" }
           ]
         }
-      }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Returns data or the documented plan-access response\", function () {",
+              "  pm.expect([200, 403]).to.include(pm.response.code);",
+              "});",
+              "if (pm.response.code === 403) {",
+              "  pm.test(\"403 uses the standard forbidden error code\", function () {",
+              "    pm.expect(pm.response.json()).to.have.nested.property(\"error.code\", \"forbidden\");",
+              "  });",
+              "  console.warn(\"This endpoint requires Advanced Access: https://build.usclimatedata.com/contact\");",
+              "}"
+            ]
+          }
+        }
+      ]
     }
   ]
 }

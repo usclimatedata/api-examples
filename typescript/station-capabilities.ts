@@ -1,8 +1,20 @@
 // Which normals datasets exist for a given station.
 interface CapabilitiesResponse {
+  request: {
+    endpoint: string;
+    station_id: string;
+  };
   station_id: string;
-  has_monthly_normals: boolean;
-  has_daily_normals: boolean;
+  capabilities: {
+    monthly_normals: boolean;
+    monthly_extended: boolean;
+    daily_normals: boolean;
+    daily_extended: boolean;
+    snow_data: boolean;
+    sunshine_data: boolean;
+    wind_data: boolean;
+    hourly_data: boolean;
+  };
 }
 
 const BASE_URL = "https://api.usclimatedata.com/api/v1";

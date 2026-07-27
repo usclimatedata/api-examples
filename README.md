@@ -22,7 +22,7 @@ More examples will be added over time.
 
 ## About the API
 
-The U.S. Climate Data API provides structured access to long-term U.S. climate normals, enriched climate metrics, and application-ready climate intelligence for developers, dashboards, websites, and AI applications.
+The U.S. Climate Data API provides structured access to long-term U.S. climate normals, enriched climate metrics, and application-ready climate intelligence for developers, dashboards, websites, agents, and AI applications.
 
 ## License
 

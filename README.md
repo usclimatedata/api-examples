@@ -46,8 +46,8 @@ All 7 live `/v1` endpoints are covered by every example set. Some endpoints requ
 
 Free and Developer are the only self-serve plans today. The extended normals
 endpoints require Advanced Access, a custom plan available on request via
-https://build.usclimatedata.com/contact -- there is no self-serve signup for
-it yet. A key without sufficient tier gets a `403` on any gated endpoint.
+'https://build.usclimatedata.com/contact'.
+There is no self-serve signup for it yet. A key without sufficient tier gets a `403` on any gated endpoint.
 Every example that touches a gated endpoint shows how to detect and handle
 that response.
 

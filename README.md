@@ -7,7 +7,7 @@ The examples demonstrate common use cases, including searching for locations and
 ## Documentation
 
 - API Website: https://build.usclimatedata.com
-- API Documentation: https://build.usclimatedata.com/docs
+- Interactive API Documentation: https://build.usclimatedata.com/docs
 
 ## Get an API key
 
@@ -56,6 +56,10 @@ requests.
 ## About the API
 
 The U.S. Climate Data API provides structured access to long-term U.S. climate normals, enriched climate metrics, and application-ready climate intelligence for developers, dashboards, websites, agents, and AI applications.
+
+## Integration tools
+
+- [Run the U.S. Climate Data API collection in Postman](POSTMAN_COLLECTION_URL)
 
 ## License
 

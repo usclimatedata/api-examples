@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "us-climate-data": {
+      "command": "npx",
+      "args": ["-y", "mcp-remote", "https://api.usclimatedata.com/mcp"]
+    }
+  }
+}

@@ -29,7 +29,8 @@ Each folder is self-contained and has its own README with setup and run instruct
 - [PHP](php/)
 - [Python](python/)
 - [Postman](postman/)
-- [MCP](mcp/) — connect an AI assistant directly, no client code needed
+
+- [MCP](mcp/) - connect an AI assistant directly, no client code needed
 
 ## Endpoints and tiers
 

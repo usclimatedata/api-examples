@@ -1,7 +1,7 @@
 # MCP (Model Context Protocol)
 
-Connect an AI assistant directly to the U.S. Climate Data API — no client code needed,
-just configuration. Requires the **Developer plan or higher**; a Free-tier account
+Connect an AI assistant directly to the U.S. Climate Data API, no client code needed,
+just configuration. Requires the **Developer plan or higher**. A Free-tier account
 cannot complete the connection.
 
 ## Server URL
@@ -15,7 +15,7 @@ https://api.usclimatedata.com/mcp
 1. You add the server URL above to your MCP client (Claude Desktop, Claude.ai,
    Cursor, or any other MCP-compatible client).
 2. The client registers itself with the server automatically (OAuth 2.1 dynamic
-   client registration) — there is no client ID or secret to create or paste in.
+   client registration), there is no client ID or secret to create or paste in.
 3. A browser window opens for a one-time consent screen. Approve it while signed in
    to your U.S. Climate Data account.
 4. The client stores an access token and a refresh token. Tokens refresh silently in
@@ -53,12 +53,12 @@ support before assuming the snippet above is still the right approach.
 
 ## Available tools
 
-- **search_locations** — Find U.S. climate stations by city name.
-- **station_capabilities** — Check which climate datasets exist for a station before requesting them.
-- **get_monthly_climate** — Long-term monthly climate averages with a written description of the local climate.
-- **get_monthly_normals** — Official NOAA 1991-2020 monthly climate normals.
-- **get_koppen_classification** — Koppen-Geiger climate classification for a station.
-- **get_daily_normals** — Official NOAA 1991-2020 daily climate normals. Requires the Developer plan or higher.
+- **search_locations** - Find U.S. climate stations by city name.
+- **station_capabilities** - Check which climate datasets exist for a station before requesting them.
+- **get_monthly_climate** - Long-term monthly climate averages with a written description of the local climate.
+- **get_monthly_normals** - Official NOAA 1991-2020 monthly climate normals.
+- **get_koppen_classification** - Koppen-Geiger climate classification for a station.
+- **get_daily_normals** - Official NOAA 1991-2020 daily climate normals. Requires the Developer plan or higher.
 
 ## Revoking access
 

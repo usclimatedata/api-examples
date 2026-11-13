@@ -60,6 +60,12 @@ support before assuming the snippet above is still the right approach.
 - **get_koppen_classification** - Koppen-Geiger climate classification for a station.
 - **get_daily_normals** - Official NOAA 1991-2020 daily climate normals. Requires the Developer plan or higher.
 
+## Missing data
+
+A `null` value in a tool result means the figure was not recorded for that station, never zero.
+Call **station_capabilities** first to see which datasets a station has. Its `climate_profile` and
+`monthly_normals` flags tell you which of the two monthly tools will return data.
+
 ## Revoking access
 
 Revoke a connected AI client at any time from the "Connected AI Clients" section of

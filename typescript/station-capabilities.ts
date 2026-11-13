@@ -6,6 +6,7 @@ interface CapabilitiesResponse {
   };
   station_id: string;
   capabilities: {
+    climate_profile: boolean;
     monthly_normals: boolean;
     monthly_extended: boolean;
     daily_normals: boolean;

@@ -1,4 +1,7 @@
 // Monthly climate averages for a station.
+// A null value means the figure was not recorded for this station. It is not zero.
+type TemperatureValue = { c: number; f: number } | number | null;
+
 interface ClimateMonthlyResponse {
   request: {
     endpoint: string;
@@ -30,8 +33,8 @@ interface ClimateMonthlyResponse {
   data: Array<{
     month: number;
     month_name: string;
-    temp_high: number;
-    temp_low: number;
+    temp_high: TemperatureValue;
+    temp_low: TemperatureValue;
     precipitation: number | null;
     rainy_days: number | null;
     sunshine_hours: number | null;

@@ -56,6 +56,17 @@ a `403` on any gated endpoint. The language examples handle that response
 explicitly, and the Postman collection includes response tests for gated
 requests.
 
+## Missing data and unavailable normals
+
+- A `null` value means the figure was not recorded for that station. It never means zero.
+- Not every station has every dataset. Call `GET /stations/{station_id}/capabilities` first:
+  `climate_profile` tells you whether `/climate` has data, `monthly_normals` whether the
+  NOAA normals endpoints do.
+- When a station has no normals at all, the normals endpoints return `404` with the error code
+  `normals_not_available` (an unknown station returns `station_not_found`).
+- A retired duplicate station ID returns the station that replaced it, so the `station_id` in the
+  response can differ from the one you sent.
+
 ## About the API
 
 The U.S. Climate Data API provides structured access to long-term U.S. climate normals, enriched climate metrics, and application-ready climate intelligence for developers, dashboards, websites, agents, and AI applications.

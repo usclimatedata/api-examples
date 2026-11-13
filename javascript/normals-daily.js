@@ -16,7 +16,9 @@ if (response.status === 403) {
     "This endpoint requires at least the Developer tier. Upgrade at https://build.usclimatedata.com/pricing"
   );
 } else if (!response.ok) {
-  throw new Error(`Request failed: ${response.status}`);
+  throw new Error(
+    `Request failed with status ${response.status}: ${await response.text()}`
+  );
 } else {
   console.log(await response.json());
 }

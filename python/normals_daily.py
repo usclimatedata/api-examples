@@ -21,5 +21,8 @@ if response.status_code == 403:
         "Upgrade at https://build.usclimatedata.com/pricing"
     )
 else:
-    response.raise_for_status()
+    if not response.ok:
+        raise SystemExit(
+            f"Request failed with status {response.status_code}: {response.text}"
+        )
     print(response.json())

@@ -14,6 +14,8 @@ url.searchParams.set("month", "7");
 
 const response = await fetch(url, { headers: { "X-API-Key": API_KEY } });
 if (!response.ok) {
-  throw new Error(`Request failed: ${response.status}`);
+  throw new Error(
+    `Request failed with status ${response.status}: ${await response.text()}`
+  );
 }
 console.log(await response.json());

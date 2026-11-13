@@ -12,5 +12,8 @@ response = requests.get(
     params={"station_id": "USFL0316", "temp_unit": "f"},
     timeout=10,
 )
-response.raise_for_status()
+if not response.ok:
+    raise SystemExit(
+        f"Request failed with status {response.status_code}: {response.text}"
+    )
 print(response.json())

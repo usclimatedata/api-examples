@@ -36,7 +36,9 @@ url.searchParams.set("limit", "5");
 
 const response = await fetch(url, { headers: { "X-API-Key": API_KEY } });
 if (!response.ok) {
-  throw new Error(`Request failed: ${response.status}`);
+  throw new Error(
+    `Request failed with status ${response.status}: ${await response.text()}`
+  );
 }
 const data: StationsResponse = await response.json();
 console.log(data);

@@ -29,7 +29,9 @@ const response = await fetch(`${BASE_URL}/stations/${STATION_ID}/capabilities`, 
   headers: { "X-API-Key": API_KEY },
 });
 if (!response.ok) {
-  throw new Error(`Request failed: ${response.status}`);
+  throw new Error(
+    `Request failed with status ${response.status}: ${await response.text()}`
+  );
 }
 const data: CapabilitiesResponse = await response.json();
 console.log(data);
